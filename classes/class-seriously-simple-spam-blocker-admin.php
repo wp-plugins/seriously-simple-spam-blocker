@@ -79,11 +79,13 @@ class SeriouslySimpleSpamBlocker_Admin {
 		add_settings_field('ss_spamblocker_text', __( 'Spam blocker text:' , 'ss-spamblocker' ), array( &$this , 'text_field' ), 'ss_spamblocker', 'main_settings');
 		add_settings_field('ss_spamblocker_image', __( 'Spam blocker image:' , 'ss-spamblocker' ), array( &$this , 'image_field' ), 'ss_spamblocker', 'main_settings');
 		add_settings_field('ss_spamblocker_restricted_templates', __( 'Restricted templates:' , 'ss-spamblocker' ), array( &$this , 'templates_field' ), 'ss_spamblocker', 'main_settings');
+		add_settings_field('ss_spamblocker_restricted_elements', __( 'Restricted elements:' , 'ss-spamblocker' ), array( &$this , 'elements_field' ), 'ss_spamblocker', 'main_settings');
 		
 		// Register settings fields
 		register_setting('ss_spamblocker', 'ss_spamblocker_text');
 		register_setting('ss_spamblocker', 'ss_spamblocker_image');
 		register_setting('ss_spamblocker', 'ss_spamblocker_restricted_templates' );
+		register_setting('ss_spamblocker', 'ss_spamblocker_restricted_elements' );
 
 	}
 
@@ -172,6 +174,23 @@ class SeriouslySimpleSpamBlocker_Admin {
 				  <label for="ss_spamblocker_text"><span class="description">' . __( 'Select the page templates on which you do NOT want the spam blocker to appear.' , 'ss-spamblocker' ) . '</span></label>';
 		}
 
+	}
+
+	/**
+	 * Output for spam blocker text field
+	 * @return str HTML output
+	 */
+	public function elements_field() {
+
+		$option = get_option('ss_spamblocker_restricted_elements');
+		$text = '';
+
+		if( $option && strlen( $option ) > 0 && $option != '' ) {
+			$text = __( $option , 'ss-spamblocker' );
+		}
+
+		echo '<input id="ss_spamblocker_restricted_elements" type="text" size="50" name="ss_spamblocker_restricted_elements" value="' . $text . '"/><br/>
+				<label for="ss_spamblocker_restricted_elements"><span class="description">' . __( 'ADVANCED USERS ONLY!<br/>Supply a comma-separated list of submit button element names that you would like to hide the spam blocker from.<br/>EXAMPLE: #form_id submit.button_class, #another_form submit' , 'ss-spamblocker' ) . '</span></label>';
 	}
 
 	/**

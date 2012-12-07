@@ -22,7 +22,7 @@ class SeriouslySimpleSpamBlocker {
 		add_action( 'wp' , array( &$this , 'check_page_template' ) );
 
 		add_action( 'wp_head' , array( &$this , 'load_scripts' ) , 20 );
-		add_action( 'wp_footer' , array( &$this , 'load_content' ) );
+		add_action( 'wp_head' , array( &$this , 'load_content' ) , 30 );
 
 		add_action('plugins_loaded', array( &$this , 'check_request' ) );
 		add_action('wp_head', array( &$this , 'check_failed' ) , 30);
@@ -94,10 +94,12 @@ class SeriouslySimpleSpamBlocker {
 			// Set defaults
 			$display_text = __( 'Drag the image into the box on the right' , 'ss-spamblocker' );
 			$display_image = $this->assets_url . 'images/default.png';
+			$restricted_elements = '';
 
 			// Get user options
 			$custom_text = get_option( 'ss_spamblocker_text' );
 			$custom_image = get_option('ss_spamblocker_image');
+			$custom_elements = get_option('ss_spamblocker_restricted_elements');
 			
 			if( $custom_text && strlen( $custom_text ) > 0 ) {
 				$display_text = __( $custom_text , 'ss-spamblocker' );
@@ -105,12 +107,17 @@ class SeriouslySimpleSpamBlocker {
 			if( $custom_image && strlen( $custom_image ) > 0 ) {
 				$display_image = $custom_image;
 			}
+			if( $custom_elements && strlen( $custom_elements ) > 0 ) {
+				$restricted_elements = trim( $custom_elements , ', ' );
+			}
 
-			// Set & output HTML
-			$output = '<img id="ss_spamblocker_user_image" src="' . $display_image . '"/>';
-			$output .= '<div id="ss_spamblocker_user_text">' . $display_text . ':</div>';
+			$settings = array(
+				'display_text' => $display_text,
+				'display_image' => $display_image,
+				'restricted_elements' => $restricted_elements
+			);
 
-			echo $output;
+			wp_localize_script( 'ss_spamblocker' , 'ss_spamblocker_settings' , $settings );
 
 		}
 

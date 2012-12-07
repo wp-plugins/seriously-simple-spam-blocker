@@ -1,18 +1,26 @@
 jQuery(document).ready(function($) {
-	if(jQuery(':submit').not('.adminbar-button').not('#searchsubmit').not('.widget :submit').length > 0) {
 
-		var sb_user_title = $('#ss_spamblocker_user_text').text();
+	var sb_restricted_elements = '';
+	if( ss_spamblocker_settings.restricted_elements.length > 0 ) {
+		sb_restricted_elements = ', ' + ss_spamblocker_settings.restricted_elements;
+	}
+
+	if(jQuery(':submit:not(.adminbar-button, #searchsubmit, .widget :submit' + sb_restricted_elements + ')').length > 0) {
+
+		var sb_user_title = ss_spamblocker_settings.display_text;
 		var sb_container;
 		sb_container  = '<div id="ss_spamblocker_drag">';
 		sb_container += '<p id="sb_title">' + sb_user_title + '</p>';
 		sb_container += '<div id="ss_spamblocker_form"></div><input type="hidden" id="ss_spamblocker_present" name="ss_spamblocker_present" value="1"/>';
 		sb_container += '</div>';
-		$(':submit').not('.adminbar-button').not('#searchsubmit').not('.widget :submit').before(sb_container);
+		$(':submit:not(.adminbar-button, #searchsubmit, .widget :submit' + sb_restricted_elements + ')').before(sb_container);
 
-		var sb_user_image = $('#ss_spamblocker_user_image').attr('src');
+		var sb_user_image = ss_spamblocker_settings.display_image;
 		var sb_img = new Image();
 		sb_img.src = sb_user_image;
+
 		sb_img.onload = function() {
+
 			var sb_img_width = this.width;
 			var sb_img_height = this.height;
 
@@ -25,7 +33,9 @@ jQuery(document).ready(function($) {
 			sb += '<div class="fix"></div>';
 
 			$('#ss_spamblocker_form').html(sb);
+
 		}
+
 	}
 	
 });
