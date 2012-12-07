@@ -73,7 +73,7 @@ class SeriouslySimpleSpamBlocker_Admin {
 	public function register_settings() {
 
 		// Add settings section
-		add_settings_section('main_settings', __( 'A few simple settings to customize your spam blocker:' , 'ss-spamblocker' ), array( &$this , 'main_settings' ), 'ss_spamblocker');
+		add_settings_section('main_settings', __( 'A few simple settings to customise your spam blocker:' , 'ss-spamblocker' ), array( &$this , 'main_settings' ), 'ss_spamblocker');
 
 		// Add settings fields
 		add_settings_field('ss_spamblocker_text', __( 'Spam blocker text:' , 'ss-spamblocker' ), array( &$this , 'text_field' ), 'ss_spamblocker', 'main_settings');
