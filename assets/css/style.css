@@ -1,0 +1,41 @@
+#ss_spamblocker {
+	clear: both;
+	margin: 10px 0;
+}
+
+#ss_spamblocker #sb_title {
+	margin-bottom: 10px;
+}
+
+#ss_spamblocker_form #sb_start {
+	float: left;
+	padding: 10px;
+}
+
+#ss_spamblocker_form #sb_object {
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: move;
+}
+
+#ss_spamblocker_form #sb_arrow {
+	float: left;
+	width: 30px;
+	padding: 10px;
+	background-image: url(../images/sb_arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#ss_spamblocker_form #sb_target {
+	float: left;
+	padding: 10px;
+	border-width: 1px;
+	border-color: #AAA;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+#ss_spamblocker_form .fix { clear: both; }
+
+img#ss_spamblocker_user_image, div#ss_spamblocker_user_text { display: none !important; }
