@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Seriously Simple Spam Blocker v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-12-06 09:38:07+0000\n"
+"Last-Translator: hugh <hugh@woothemes.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:103
+#: classes/class-seriously-simple-spam-blocker.php:95
+#@ ss-spamblocker
+msgid "Drag the image into the box on the right"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:129
+#@ ss-spamblocker
+msgid "Upload new image"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:130
+#@ ss-spamblocker
+msgid "Reset to default"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:76
+#@ ss-spamblocker
+msgid "A few simple settings to customize your spam blocker:"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:79
+#@ ss-spamblocker
+msgid "Spam blocker text:"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:80
+#@ ss-spamblocker
+msgid "Spam blocker image:"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:81
+#@ ss-spamblocker
+msgid "Restricted templates:"
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:110
+#@ ss-spamblocker
+msgid "Text to be displayed to users above the spam blocker image."
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:172
+#@ ss-spamblocker
+msgid "Select the page templates on which you do NOT want the spam blocker to appear."
+msgstr ""
+
+#: classes/class-seriously-simple-spam-blocker-admin.php:192
+#@ ss-spamblocker
+msgid "Save Settings"
+msgstr ""
+
