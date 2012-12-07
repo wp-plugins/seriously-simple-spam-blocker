@@ -127,13 +127,13 @@ class SeriouslySimpleSpamBlocker {
 			$ajaxform = false;
 			if( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' ) {
 				$ajaxform = true;
+				_e( 'Spam blocker test failed - please drag the image into the box.' , 'ss-spamblocker' );
 			}
 
 			if( ! $ajaxform ) {
 				$referrer = $_SERVER['HTTP_REFERER'];
-				$sep = '?';
-				if ( strpos( $referrer, '?' ) != false ) { $sep = '&'; }
-				wp_redirect( $referrer . $sep . 'sb_failed=1#ss_spamblocker_drag' );
+				$url = add_query_arg( 'sb_failed'  , '1' , $referrer ) . '#ss_spamblocker_drag';
+				wp_redirect( $url );
 			}
 
 			exit;

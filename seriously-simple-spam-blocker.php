@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Seriously Simple Spam Blocker
  * Plugin URI: http://www.hughlashbrooke.com/
- * Description: A form validation plugin that uses a simple drag-and-drop image instead of traditional unfriendly CAPTCHA fields.
- * Version: 1.0.0
+ * Description: A form validation plugin that replaces unfriendly CAPTCHA fields with a simple drag-and-drop image
+ * Version: 1.0.1
  * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Author URI: http://www.hughlashbrooke.com
  * Requires at least: 3.3
  * Tested up to: 3.4
  * 

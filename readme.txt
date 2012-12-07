@@ -1,20 +1,17 @@
 === Seriously Simple Spam Blocker ===
 Contributors: hlashbrooke
-Donate link: http://www.hughlashbrooke.com/
 Tags: spam, captcha, comments, form
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A form validation plugin that uses a simple drag-and-drop image instead of traditional unfriendly CAPTCHA fields.
+A form validation plugin that replaces unfriendly CAPTCHA fields with a simple drag-and-drop image.
 
 == Description ==
 
 "Seriously Simple Spam Blocker" is a simple and easy-to-use solution to prevent annoying form spam. It is guaranteed to be 100% effective against automated form submissions and is far more friendly than traditional CAPTCHA fields - all it requires from users is that they drag and drop an image.
-
-It is automatically added to every 'submit' button on your site (with options to hide it from certain pages), so there is no need for any manual setup.
 
 == Usage ==
 
@@ -44,14 +41,8 @@ If you have more than one submit button on the page then the spam blocker will o
 1. The default front-end view of the spam blocker on the Twenty Twelve theme
 2. The plugin settings screen within the WordPress admin.
 
-== Changelog ==
-
-= 1.0.0 =
-* 2012-12-07
-* Initial release
-
 == Upgrade Notice ==
 
 = 1.0.0 =
-* 2012-12-07
-* Initial release
+* 2012-12-06
+* Initial release.
