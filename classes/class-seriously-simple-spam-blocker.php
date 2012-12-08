@@ -23,6 +23,7 @@ class SeriouslySimpleSpamBlocker {
 
 		add_action( 'wp_head' , array( &$this , 'load_scripts' ) , 20 );
 		add_action( 'wp_head' , array( &$this , 'load_content' ) , 30 );
+		add_action( 'wp_footer' , array( &$this , 'load_image' ) );
 
 		add_action('plugins_loaded', array( &$this , 'check_request' ) );
 		add_action('wp_head', array( &$this , 'check_failed' ) , 30);
@@ -73,7 +74,7 @@ class SeriouslySimpleSpamBlocker {
 
 		if( $this->load_spam_blocker ) {
 
-			wp_register_script( 'ss_spamblocker' , esc_url( $this->assets_url . 'js/scripts.js' ) , array('jquery') );
+			wp_register_script( 'ss_spamblocker' , esc_url( $this->assets_url . 'js/scripts.js' ) , array( 'jquery' , 'ss_spamblocker-modernizr' ) );
 			wp_enqueue_script( 'ss_spamblocker' );
 
 			wp_register_style( 'ss_spamblocker' , esc_url( $this->assets_url . 'css/style.css' ) );
@@ -121,6 +122,15 @@ class SeriouslySimpleSpamBlocker {
 
 		}
 
+	}
+
+	public function load_image() {
+		$display_image = $this->assets_url . 'images/default.png';
+		$custom_image = get_option('ss_spamblocker_image');
+		if( $custom_image && strlen( $custom_image ) > 0 ) {
+			$display_image = $custom_image;
+		}
+		echo '<img src="' . $display_image . '" id="ss_spamblocker_user_image" width="0" height="0" border="0" />';
 	}
 
 	/**

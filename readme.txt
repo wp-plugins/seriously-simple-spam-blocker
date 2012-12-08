@@ -4,7 +4,7 @@ Donate link: http://www.hughlashbrooke.com/
 Tags: spam, captcha, comments, form
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,12 @@ If you have more than one submit button on the page then the spam blocker will o
 
 == Changelog ==
 
+= 1.0.3 =
+* 2012-12-08
+* Adding support for touch devices (only works on some devices)
+* Fixing issue where spam blocker would not show in some browsers
+* Improving cross-browser support
+
 = 1.0.2 =
 * 2012-12-07
 * Adding option to hide spam blocker from specified submit buttons
@@ -61,6 +67,10 @@ If you have more than one submit button on the page then the spam blocker will o
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+* 2012-12-08
+* Adding support for (some) touch devices, fixing issue where spam blocker would not show in some browsers & improving cross-browser support
 
 = 1.0.2 =
 * 2012-12-07

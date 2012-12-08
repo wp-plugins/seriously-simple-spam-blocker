@@ -16,6 +16,14 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	cursor: move;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+#ss_spamblocker_form #sb_object.complete {
+	background-image: none !important;
 }
 
 #ss_spamblocker_form #sb_arrow {
@@ -33,9 +41,18 @@
 	border-width: 1px;
 	border-color: #AAA;
 	border-style: solid;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#ss_spamblocker_form #sb_target.over {
+	border-style: dashed;
 }
 
 #ss_spamblocker_form .fix { clear: both; }
 
-img#ss_spamblocker_user_image, div#ss_spamblocker_user_text { display: none !important; }
+img#ss_spamblocker_user_image { width: 0px; height: 0px; border: 0px; display: none !important; }
