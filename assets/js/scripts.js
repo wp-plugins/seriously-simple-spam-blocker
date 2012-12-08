@@ -33,9 +33,7 @@ jQuery( document ).ready( function( $ ) {
 			sb += '<div class="fix"></div>';
 
 			$( '#ss_spamblocker_form' ).html( sb );
-
 			
-
 			// Once HTML has been rendered, load drag event listeners
 			var start = document.querySelectorAll('#sb_object');
 			[].forEach.call(start, function(el) {
@@ -50,7 +48,7 @@ jQuery( document ).ready( function( $ ) {
 				el.addEventListener('dragleave', handleDragLeave, false);
 				el.addEventListener('drop', handleDrop, false);
   				el.addEventListener('dragend', handleDragEnd, false);
-  				
+
   				el.addEventListener('touchenter', handleDragOver, false);
   				el.addEventListener('touchleave', handleDragLeave, false);
   				el.addEventListener('touchmove', handleDragOver, false);
@@ -101,25 +99,4 @@ function handleDrop(e) {
 	return false;
 }
 
-function handleDragEnd(e) {
-
-	// var target = document.querySelectorAll('#sb_target');
-	// [].forEach.call(target, function (el) {
-	// 	el.classList.remove( 'over' );
-	// });
-}
-
-
-
-
-
-
-// function ss_spamblocker_drag(ev) { ev.dataTransfer.setData("Text",ev.target.id); }
-// function ss_spamblocker_allow_drop(ev) { ev.preventDefault(); }
-// function ss_spamblocker_drop(ev) {
-// 	ev.preventDefault();
-// 	var data = ev.dataTransfer.getData("Text");
-// 	ev.target.appendChild(document.getElementById(data));
-// 	var sb_field = '<input type="hidden" name="ss_spamblocker_check" value="1"/>';
-// 	jQuery('#ss_spamblocker_present').after(sb_field);
-// }
+function handleDragEnd(e) {}
