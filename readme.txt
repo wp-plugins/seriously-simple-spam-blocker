@@ -51,6 +51,7 @@ If you have more than one submit button on the page then the spam blocker will o
 * Adding support for touch devices (only works on some devices)
 * Fixing issue where spam blocker would not show in some browsers
 * Improving cross-browser support
+* Adding Modernizr check for drag and drop functionality
 
 = 1.0.2 =
 * 2012-12-07

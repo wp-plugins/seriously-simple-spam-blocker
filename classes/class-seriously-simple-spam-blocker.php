@@ -74,7 +74,10 @@ class SeriouslySimpleSpamBlocker {
 
 		if( $this->load_spam_blocker ) {
 
-			wp_register_script( 'ss_spamblocker' , esc_url( $this->assets_url . 'js/scripts.js' ) , array( 'jquery' ) );
+			wp_register_script( 'ss_spamblocker-modernizr' , esc_url( $this->assets_url . 'js/modernizr.custom.js' ) , array( 'jquery' ) );
+			wp_enqueue_script( 'ss_spamblocker-modernizr' );
+
+			wp_register_script( 'ss_spamblocker' , esc_url( $this->assets_url . 'js/scripts.js' ) , array( 'jquery' , 'ss_spamblocker-modernizr' ) );
 			wp_enqueue_script( 'ss_spamblocker' );
 
 			wp_register_style( 'ss_spamblocker' , esc_url( $this->assets_url . 'css/style.css' ) );
