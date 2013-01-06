@@ -3,8 +3,8 @@ Contributors: hlashbrooke
 Donate link: http://www.hughlashbrooke.com/
 Tags: spam, captcha, comments, form
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 1.0.3
+Tested up to: 3.4.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ If you have more than one submit button on the page then the spam blocker will o
 2. The plugin settings screen within the WordPress admin.
 
 == Changelog ==
+
+= 1.0.4 =
+* 2013-01-06
+* Fixing bug that broke media uploader in WordPress 3.5
 
 = 1.0.3 =
 * 2012-12-08

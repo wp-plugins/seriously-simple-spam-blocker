@@ -12,11 +12,13 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-});
+	if( jQuery( '#sb_upload_file' ).length > 0 ) {
+		window.send_to_editor = function(html) {
+			var file_url = jQuery( html ).attr( 'href' );
+			jQuery( '#ss_spamblocker_image' ).val( file_url );
+			jQuery( '#ss_spamblocker_image_preview' ).attr( 'src' , file_url );
+			tb_remove();
+		}
+	}
 
-window.send_to_editor = function(html) {
-	var file_url = jQuery( html ).attr( 'href' );
-	jQuery( '#ss_spamblocker_image' ).val( file_url );
-	jQuery( '#ss_spamblocker_image_preview' ).attr( 'src' , file_url );
-	tb_remove();
-}
+});

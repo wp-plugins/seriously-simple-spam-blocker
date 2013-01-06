@@ -3,11 +3,11 @@
  * Plugin Name: Seriously Simple Spam Blocker
  * Plugin URI: http://www.hughlashbrooke.com/portfolio-item/wordpress-plugin-seriously-simple-spam-blocker/
  * Description: A form validation plugin that replaces unfriendly CAPTCHA fields with a simple drag-and-drop image
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Hugh Lashbrooke
  * Author URI: http://www.hughlashbrooke.com/
- * Requires at least: 3.3
- * Tested up to: 3.4
+ * Requires at least: 3.0
+ * Tested up to: 3.4.2
  * 
  * @package Seriously Simple Spam Blocker
  * @author Hugh Lashbrooke
