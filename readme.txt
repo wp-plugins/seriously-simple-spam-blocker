@@ -73,6 +73,10 @@ If you have more than one submit button on the page then the spam blocker will o
 
 == Upgrade Notice ==
 
+= 1.0.4 =
+* 2013-01-06
+* Fixing bug that broke media uploader in WordPress 3.5
+
 = 1.0.3 =
 * 2012-12-08
 * Adding support for (some) touch devices, fixing issue where spam blocker would not show in some browsers & improving cross-browser support
