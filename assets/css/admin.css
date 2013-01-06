@@ -1,0 +1,9 @@
+#ss_spamblocker-icon.icon32 {
+  background: transparent url(../images/spamblocker-icon.png) no-repeat left top;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+  #ss_spamblocker-icon.icon32 {
+    background-image: url(../images/spamblocker-icon@x2.png);
+    background-size: 32px 187px;
+  }
+}
