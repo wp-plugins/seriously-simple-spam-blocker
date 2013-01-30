@@ -1,9 +1,9 @@
 === Seriously Simple Spam Blocker ===
 Contributors: hlashbrooke
-Donate link: http://www.hughlashbrooke.com/
+Donate link: http://www.hughlashbrooke.com/donate/
 Tags: spam, captcha, comments, form
 Requires at least: 3.0
-Tested up to: 3.4.2
+Tested up to: 3.5.1
 Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
