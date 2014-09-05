@@ -1,14 +1,14 @@
-=== Seriously Simple Spam Blocker ===
-Contributors: hlashbrooke
-Donate link: http://www.hughlashbrooke.com/donate/
-Tags: spam, captcha, comments, form
+=== [RETIRED] Seriously Simple Spam Blocker ===
+Contributors:
+Donate link:
+Tags: retired, adopt-me
 Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A form validation plugin that uses a simple drag-and-drop image instead of traditional unfriendly CAPTCHA fields.
+This plugin is retired and is not recommended for active use.
 
 == Description ==
 
