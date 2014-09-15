@@ -1,14 +1,14 @@
-=== [RETIRED] Seriously Simple Spam Blocker ===
+=== Seriously Simple Spam Blocker ===
 Contributors: voldemortensen
 Donate link:
-Tags: retired, adopt-me
+Tags: spam, simple
 Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin is retired and is not recommended for active use.
+This plugin is out of retirement and a new version will be available soon!
 
 == Description ==
 
