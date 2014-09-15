@@ -1,5 +1,5 @@
 === [RETIRED] Seriously Simple Spam Blocker ===
-Contributors:
+Contributors: voldemortensen
 Donate link:
 Tags: retired, adopt-me
 Requires at least: 3.0
