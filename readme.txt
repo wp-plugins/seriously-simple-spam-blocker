@@ -1,7 +1,7 @@
 === Seriously Simple Spam Blocker ===
 Contributors: voldemortensen
 Donate link: http://gmortensen-ohwp.com/
-Tags: spam, simple
+Tags: spam, simple, protection, security
 Requires at least: 3.0
 Tested up to: 4.1
 Stable tag: 2.0
