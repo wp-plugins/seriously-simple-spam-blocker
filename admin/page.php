@@ -6,7 +6,34 @@ function sssb_menu() {
 }
 add_action( 'admin_menu', 'sssb_menu' );
 
+function sssb_valid_option( $option ) {
+
+	$option = trim( stripslashes( $option ) );
+	if( is_numeric( $option ) && ! preg_match( '/([^0-9])+/', $option ) ) {
+		if( $option >= 0 && $option <= 100 )
+			return true;
+	}
+	return false;
+}
+
 function sssb_admin_page() {
+
+	if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+
+		$sssb_ip = ( isset( $_POST['sssb_ip'] ) ? $_POST['sssb_ip'] : false );
+		$sssb_username = ( isset( $_POST['sssb_username'] ) ? $_POST['sssb_username'] : false );
+		$sssb_email = ( isset( $_POST['sssb_email'] ) ? $_POST['sssb_email'] : false );
+
+		if( false !== $sssb_ip && sssb_valid_option( $sssb_ip ) ) {
+			update_option( 'sssb_confidence_ip', esc_sql( trim( stripslashes( $sssb_ip ) ) ) );
+		}
+		if( false !== $sssb_username && sssb_valid_option( $sssb_username ) ) {
+			update_option( 'sssb_confidence_username', esc_sql( trim( stripslashes( $sssb_username ) ) ) );
+		}
+		if( false !== $sssb_email && sssb_valid_option( $sssb_email ) ) {
+			update_option( 'sssb_confidence_email', esc_sql( trim( stripslashes( $sssb_email ) ) ) );
+		}
+	}
 
 ?>
 	<h2>Spam Report</h2>
@@ -17,7 +44,25 @@ function sssb_admin_page() {
 		</tr>
 	</table>
 	<h2>Spam Blocking Options</h2>
-		<p>Coming soon!</p>
+	<form action="" method="POST">
+	<div>
+	<label for="sssb_ip">IP Confidence</label>
+	<input type="text" name="sssb_ip" placeholder="<?php echo get_option( 'sssb_confidence_ip', 75 ); ?>" />
+	</div>
+	<div>
+	<label for="sssb_username">Username Confidence</label>
+	<input type="text" name="sssb_username" placeholder="<?php echo get_option( 'sssb_confidence_username', 95 ); ?>" />
+	</div>
+	<div>
+	<label for="sssb_email">Email Confidence</label>
+	<input type="text" name="sssb_email" placeholder="<?php echo get_option( 'sssb_confidence_email', 75 ); ?>" />
+	</div>
+	<div>
+	<input type="submit" value="Save Options" />
+	</div>
+	</form>
+	
+	<p>Note: A confidence level is the probability that a given parameter falls within a specified set of values. In other words a confidence level of 95 means you are at least 95% sure the input is spam. Raising the number is less strict, lowering the number is more strict.</p>
 
 	<h2>Support</h2>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
