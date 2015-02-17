@@ -33,8 +33,7 @@ Installing "Seriously Simple Spam Blocker" can be done either by searching for "
 
 = But seriously, when are more features coming? =
 
-Soon. More options are coming, such as which pages to block on, how strict you
-want your filtering, etc.
+Soon. More options are coming, such as which pages to block on, compatibility with Jetpack/other major contact form  plugins, etc..
 
 == Screenshots ==
 
