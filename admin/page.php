@@ -20,6 +20,7 @@ function sssb_admin_page() {
 
 	if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
+		check_admin_referer( 'update_sssb_settings', 'sssb_nonce' );
 		$sssb_ip = ( isset( $_POST['sssb_ip'] ) ? $_POST['sssb_ip'] : false );
 		$sssb_username = ( isset( $_POST['sssb_username'] ) ? $_POST['sssb_username'] : false );
 		$sssb_email = ( isset( $_POST['sssb_email'] ) ? $_POST['sssb_email'] : false );
@@ -58,6 +59,7 @@ function sssb_admin_page() {
 	<input type="text" name="sssb_email" placeholder="<?php echo get_option( 'sssb_confidence_email', 75 ); ?>" />
 	</div>
 	<div>
+	<?php wp_nonce_field( 'update_sssb_settings', 'sssb_nonce' ); ?>
 	<input type="submit" value="Save Options" />
 	</div>
 	</form>

@@ -4,7 +4,7 @@ Donate link: http://jmortensen.bluehoststaff.com/
 Tags: spam, simple
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 2.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,10 @@ want your filtering, etc.
 None... for now!
 
 == Changelog ==
+
+= 2.1.1 =
+* 2015-02-19
+* Secured the settings form
 
 = 2.1 =
 * 2015-02-16
