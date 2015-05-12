@@ -3,11 +3,11 @@
  * Plugin Name: Seriously Simple Spam Blocker
  * Plugin URI: http://jmortensen.bluehoststaff.com/?utm_source=wp_plugin_header&utm_medium=plugin&utm_campaign=sssb
  * Description: A plugin that interacts with the StopForumSpam.com api to protect your website.
- * Version: 2.1.1
+ * Version: 2.1.2
  * Author: Garth Mortensen
  * Author URI: http://jmortensen.bluehoststaff.com/?utm_source=wp_plugin_header&utm_medium=plugin&utm_campaign=home
  * Text Domain: sssb
- * Tested up to: 4.1.1
+ * Tested up to: 4.2.2
  * 
  * @package Seriously Simple Spam Blocker
  * @author Garth Mortensen
