@@ -1,24 +1,21 @@
-=== [RETIRED] Seriously Simple Spam Blocker ===
+=== Seriously Simple Spam Blocker ===
 Contributors: voldemortensen
-Donate link:
-Tags: retired, adopt-me
+Tags: spam, simple, protection, security
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 1.0.4
+Tested up to: 4.2.2
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin is retired and is not recommended for active use.
-
 == Description ==
 
-"Seriously Simple Spam Blocker" is a simple and easy-to-use solution to prevent annoying form spam. It is guaranteed to be 100% effective against automated form submissions and is far more friendly than traditional CAPTCHA fields - all it requires from users is that they drag and drop an image.
-
-It is automatically added to every 'submit' button on your site (with options to hide it from certain pages), so there is no need for any manual setup.
+A plugin that interacts with the StopForumSpam.com api to protect your
+website. Find out how many unwanted attempts have been blocked in Dashboard >
+Tools > Seriously Simply Spam Blocker.
 
 == Usage ==
 
-Simply upload the plugin and you're good to go. By going to Settings > Spam Blocker you can customise the explanatory text users see, the image that is used in the drag-and-drop interface and which page templates the spam blocker is used on.
+Simply upload/activate the plugin and you're good to go.
 
 == Installation ==
 
@@ -31,20 +28,37 @@ Installing "Seriously Simple Spam Blocker" can be done either by searching for "
 
 == Frequently Asked Questions ==
 
-= The spam blocker shows up where I don't want it to appear. =
+= NONE! Because it's that easy to use. =
 
-On the settings page for the plugin you can select which of the page templates you would like to hide the spam blocker from.
+= But seriously, when are more features coming? =
 
-= There is more than one submit button on a page and the spam blocker is behaving strangely. =
-
-If you have more than one submit button on the page then the spam blocker will only work for the first one and will not show correctly on the others.
+Soon. More options are coming, such as which pages to block on, how strict you
+want your filtering, etc.
 
 == Screenshots ==
 
-1. The default front-end view of the spam blocker on the Twenty Twelve theme
-2. The plugin settings screen within the WordPress admin.
+None... for now!
 
 == Changelog ==
+
+= 2.1.3 =
+* Update default confidences for better protection out of the box.
+
+= 2.1.2 =
+* 2015-05-12
+* Updated compatibility
+
+= 2.1.1 =
+* 2015-02-19
+* Secured the settings form
+
+= 2.1 =
+* 2015-02-16
+* Added ability to adjust spam settings.
+
+= 2.0 =
+* 2014-12-17
+* Plugin adopted and revamped. 
 
 = 1.0.4 =
 * 2013-01-06
